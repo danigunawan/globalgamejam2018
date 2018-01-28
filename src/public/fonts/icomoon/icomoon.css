@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?enz64m');
+  src:  url('fonts/icomoon.eot?enz64m#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?enz64m') format('truetype'),
+    url('fonts/icomoon.woff?enz64m') format('woff'),
+    url('fonts/icomoon.svg?enz64m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-scan:before {
+  content: "\e907";
+}
+.icon-switch:before {
+  content: "\e906";
+}
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-qrcode:before {
+  content: "\e938";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-map2:before {
+  content: "\e94c";
+}
+.icon-stopwatch:before {
+  content: "\e952";
+}
+.icon-redo:before {
+  content: "\e966";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-user-md:before {
+  content: "\e900";
+}
+.icon-profile:before {
+  content: "\e901";
+}
+.icon-card:before {
+  content: "\e901";
+}
+.icon-id:before {
+  content: "\e901";
+}
+.icon-vcard:before {
+  content: "\e901";
+}
+.icon-profile2:before {
+  content: "\e902";
+}
+.icon-card2:before {
+  content: "\e902";
+}
+.icon-id2:before {
+  content: "\e902";
+}
+.icon-vcard2:before {
+  content: "\e902";
+}
+.icon-profile3:before {
+  content: "\e903";
+}
+.icon-card3:before {
+  content: "\e903";
+}
+.icon-id3:before {
+  content: "\e903";
+}
+.icon-vcard3:before {
+  content: "\e903";
+}
+.icon-injection:before {
+  content: "\e904";
+}
+.icon-medicine:before {
+  content: "\e904";
+}
+.icon-health:before {
+  content: "\e905";
+}
+.icon-emergency:before {
+  content: "\e905";
+}
+.icon-medicine2:before {
+  content: "\e905";
+}

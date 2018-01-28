@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bioEmergency Game</title>
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="fonts/organo/organo.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/fjalla-one/fjalla-one-font.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/lato/lato-font.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<section class="welcome">
+		<img class="logo" width="512" height="108" src="img/bioemergency-logo.png" srcset="img/bioemergency-logo.png 1x, img/bioemergency-logo-2x.png 2x, img/bioemergency-logo-3x.png 3x" />
+		<nav class="home-nav">
+			<ul>
+				<li><a href="javascript:;" data-target="modal-qr" class="modal-qr-handler">Jugar</a></li>
+				<li><a href="javascript:;" data-target="modal-instrucciones" class="modal-instrucciones-handler">Instrucciones</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<div class="credits">
+				<h1 class="arweb-logo">
+					<span class="ar">AR</span><span class="web">web</span>
+				</h1>
+				<img src="img/ggj.png" width="100" height="100" align="absmiddle" class="ggj-logo" />
+				<img src="img/ggj-cuba.jpg" width="200" align="absmiddle" class="ggj-cuba-logo" />
+			</div>
+		</footer>
+	</section>
+	<div class="modal-instrucciones">
+		<a class="close-modal red-text" href="javascript:;">&times;</a>
+		<div class="inner-padding">
+			<p><strong>Este es un texto en negrita</strong> y este normal</p>
+			<p><span class="italic">Este es un texto en cursiva</span></p>
+			<p><span class="italic red-text">Y este es un texto rojo</span></p>
+			<p><span class="italic red-bg">Texto con fondo rojo</span> como pueden ver</p>
+			<p><span class="bigger">+ grande</span> que los demás</p>
+			<p>Ahora ya pueden poner todo el texto.</p>
+		</div>
+	</div>
+	<div class="modal-qr"><img src="img/qr-play-now.svg" /></div>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

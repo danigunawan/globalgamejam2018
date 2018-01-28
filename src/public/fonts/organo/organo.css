@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Organo';
+    src:url('Organo.ttf.woff') format('woff'),
+        url('Organo.ttf.svg#Organo') format('svg'),
+        url('Organo.ttf.eot'),
+        url('Organo.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

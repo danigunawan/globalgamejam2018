@@ -1,0 +1,575 @@
+/*
+** Reset
+*/
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	/*font-size: 100%;*/
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+	max-width: 100%;
+}
+
+html {
+	/*overflow-y: scroll;*/
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+}
+
+/*
+** Common
+*/
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+body {
+	background-image: url( ../img/bg.png );
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+body.modal-active section.welcome {
+	transform: scale(0.8);
+	transition-duration: 0.3s;
+}
+section.welcome {
+	transition-duration: 0.3s;
+}
+.arweb-logo {
+	transition-duration: 0.3s;
+	font-size: 64px;
+	display: inline-block;
+}
+.arweb-logo .ar {
+	font-family: 'Fjalla One';
+	background-color: #573769;
+	color: #FFFFFF;
+	padding: 5px;
+	display: inline-block;
+	transition-duration: 0.3s;
+}
+.arweb-logo .web {
+	font-family: 'Lato';
+	font-weight: 300;
+	font-size: 120%;
+	transition-duration: 0.3s;
+	display: inline-block;
+}
+.arweb-logo:hover .ar {
+	transform: perspective(486px) rotateY(40deg);
+	transform-origin: -22px 9px -19px;
+	transform-style: preserve-3d;
+}
+.arweb-logo:hover .web {
+	transform: perspective(486px) rotateY(-40deg);
+	transform-origin: 80px 1px -67px;
+	transform-style: preserve-3d;
+	background-color: rgba(255,255,255,0.3);
+	padding: 0 7px 1px;
+	line-height: 1;
+	font-size: 90%;
+}
+.inner-padding {
+	padding: 24px;
+}
+p, strong, span.italic {
+	font-family: 'Lato';
+	font-weight: 400;
+}
+strong {
+	font-weight: 700;
+}
+span.italic {
+	font-style: italic;
+  	font-weight: 400;
+}
+.red-text {
+	color: #CE2020;
+}
+.red-bg {
+	color: #FFFFFF;
+	background-color: #CE2020;
+	padding: 3px 8px;
+}
+.bigger {
+	font-size: 150%;
+}
+h1.bigtext {
+	font-family: 'Organo';
+	color: #333333;
+	font-weight: normal;
+	font-size: 64px;
+	text-align: center;
+	padding-top: 50px;
+	margin: 0;
+}
+.aligncenter {
+	text-align: center;
+}
+
+/*
+** Home
+*/
+img.logo {
+	display: block;
+	margin: 0 auto;
+	max-width: 90%;
+	height: auto;
+	padding-top: 150px;
+	margin-bottom: 100px;
+}
+nav.home-nav ul li {
+	display: block;
+	text-align: center;
+	margin-bottom: 30px;
+}
+nav.home-nav ul li a {
+	border: solid 1px #CE2020;
+	color: #CE2020;
+	font-family: 'Organo';
+	font-size: 32px;
+	border-radius: 100px;
+	text-decoration: none;
+	padding: 15px 30px;
+	transition-duration: 0.2s;
+	display: inline-block;
+}
+nav.home-nav ul li a:hover,
+nav.home-nav ul li a:active {
+	border: solid 1px #CE2020;
+	background-color: #CE2020;
+	color: #FFFFFF;
+	padding: 15px 45px;
+	transform: scale(1.1);
+}
+.credits {
+	text-align: center;
+}
+img.ggj-logo,
+img.ggj-cuba-logo {
+	line-height: 1;
+	margin-top: -34px;
+	margin-left: 20px;
+}
+img.ggj-cuba-logo {
+	border-radius: 8px;
+}
+
+/*
+** Modal Instrucciones
+*/
+.modal-instrucciones,
+.modal-qr {
+	background-color: #FFFFFF;
+	width: 640px;
+	height: 90%;
+	position: fixed;
+	left: -800px;
+	top: 5%;
+	transition-duration: 0.2s;
+	z-index: 99999;
+	box-shadow: 0 2px 0px rgba( 0, 0, 0, 0.3 );
+	font-family: 'Lato';
+	border-radius: 5px;
+}
+.modal-qr {
+	width: 300px;
+	height: 300px;
+	left: -800px;
+	top: calc( 50% - 150px );
+	text-align: center;
+}
+.activated {
+	left: calc( 50% - 320px );
+}
+.activated-qr {
+	left: calc( 50% - 150px ) !important;
+}
+.trans-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	z-index: 9990;
+	background-color: rgba( 0, 0, 0, 0.4 );
+}
+a.close-modal {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-family: 'Lato';
+	font-weight: 900;
+	text-decoration: none;
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #CE2020;
+	font-size: 32px;
+}
+
+/*
+** Registro
+*/
+.avatar-frame {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	border-radius: 100%;
+	display: block;
+	border: solid 3px #CE2020;
+	background-color: #FFFFFF;
+}
+button.btn,
+button.btn-field {
+	background-color: #CE2020;
+	color: #FFFFFF;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	font-size: 18px;
+	font-family: 'Lato';
+}
+button.btn:hover,
+button.btn:active,
+button.btn-field:hover,
+button.btn-field:active {
+	border: solid 1px #CE2020;
+	background-color: #CE2020;
+	color: #FFFFFF;
+	padding: 15px 45px;
+	transform: scale(1.1);
+	transition-duration: 0.2s;
+}
+input.txt-field {
+	border: solid 3px #333333;
+	border-radius: 3px;
+	border: solid 3px #CE2020;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	text-indent: 15px;
+}
+input.txt-field:focus {
+	border: solid 3px #CE2020;
+}
+
+/*
+** Visor Game
+*/
+section.visor {
+	height: 100%;
+	overflow-y: hidden;
+}
+.game-frame {
+	width: 100%;
+	top: 0;
+	height:auto;
+	background-color: rgba( 0, 0, 0, 0.9 );
+}
+.canvas {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	background-color: rgba(255, 0, 0, 0.5);
+}
+button.app-control-btn {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	border: solid 3px #CE2020;
+	color: #CE2020;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 32px;
+	text-shadow: 1px 1px 1px #333333;
+	box-shadow: 1px 1px 1px #333333;
+}
+.app-control-btn {
+	position: fixed;
+}
+button.app-control-btn.scan-btn {
+	bottom: 15px;
+	left: calc( 50% - 40px );
+}
+button.app-control-btn.medicine-btn {
+	bottom: 25px;
+	left: calc( 50% - 132px );
+	width: 60px;
+	height: 60px;
+	/*display: none;*/
+}
+button.app-control-btn.emergency-btn {
+	bottom: 25px;
+	left: calc( 50% + 70px );
+	width: 60px;
+	height: 60px;
+	/*display: none;*/
+}
+button.app-control-btn.green {
+	border: solid 3px #21955B;
+	color: #21955B;
+}
+button.app-control-btn.orange {
+	border: solid 3px #FAA61A;
+	color: #FAA61A;
+}
+button.app-control-btn.blue {
+	border: solid 3px #47ADDD;
+	color: #47ADDD;
+	top: 15px;
+	left: 15px;
+	width: 60px;
+	height: 60px;
+}
+
+/*
+** Message modal
+*/
+.message-modal {
+	width: 252px;
+	height: 102px;
+	left: -800px;
+	top: calc( 50% - 75px );
+	position: fixed;
+	transition-duration: 0.2s;
+	background-color: #FFFFFF;
+	box-shadow: 0 3px 1px rgba( 0, 0, 0, 0.9 );
+	border-radius: 3px;
+	padding: 24px;
+	z-index: 99999;
+	font-family: 'Lato';
+	font-weight: 400;
+}
+.message-modal.show-modal {
+	left: calc( 50% - 150px );
+}
+
+/*
+** Menu
+*/
+.hidden-check {
+	display: none;
+}
+.menu-handler-container {
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	z-index: 9999;
+}
+label.user-menu-handler {
+	width: 30px;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	float: right;
+	padding: 15px;
+}
+span.menu-line {
+	height: 2px;
+	background-color: #FFFFFF;
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	float: right;
+	transition-duration: 0.3s;
+}
+span.menu-line:nth-child(1) {
+	width: 75%;
+}
+span.menu-line:nth-child(2) {
+	width: 50%;
+}
+span.menu-line:nth-child(3) {
+	width: 90%;
+}
+input#app-menu-check:checked + .menu-handler-container label span.menu-line:nth-child(1) {
+	transform: rotate(-45deg);
+	margin-top: 8px;
+}
+input#app-menu-check:checked + .menu-handler-container label span.menu-line:nth-child(2) {
+	transform: translateX(-100px);
+}
+input#app-menu-check:checked + .menu-handler-container label span.menu-line:nth-child(3) {
+	transform: rotate(45deg);
+	width: 75%;
+	margin-top: -14px;
+}
+.trans-close-drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	z-index: 9990;
+	background-color: rgba( 0, 0, 0, 0.4 );
+}
+input#app-menu-check:checked + .menu-handler-container + label.trans-close-drawer {
+	display: block;
+}
+nav.menu-drawer {
+	width: 320px;
+	position: fixed;
+	overflow-y: auto;
+	top: 0;
+	right: -500px;
+	height: 100%;
+	background-color: #222831;
+	transition-duration: 0.2s;
+	z-index: 9995;
+	box-shadow: -20px 0 97px rgba(0,0,0,0.5);
+}
+input#app-menu-check:checked + .menu-handler-container + label.trans-close-drawer + nav.menu-drawer {
+	right: 0;
+}
+.body-container {
+	transition-duration: 0.2s;
+}
+input#app-menu-check:checked ~ .body-container {
+	transform: scale( 0.97 );
+	transition-duration: 0.2s;
+}
+.user-info-container:hover .menu-user-icon,
+.user-info-container:hover .menu-user-info {
+	text-shadow: 0 0 5px #000000;
+}
+.menu-user-icon {
+	text-shadow: 0 1px 0 #000000;
+	transition-duration: 0.2s;
+}
+.menu-user-icon span.icon {
+	font-size: 48px;
+	color: #3A9AC0;
+}
+.menu-user-info {
+	font-family: "Lato";
+	color: #EFEFEF;
+	text-shadow: 0 1px 0 #000000;
+	transition-duration: 0.2s;
+}
+.menu-user-info span {
+	display: block;
+}
+span.drawer-username {
+	font-size: 24px;
+}
+span.drawer-role {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #3A9AC0;
+}
+.dark-cont {
+	background-color: #222831;
+}
+span.drawer-separator {
+	color: #AAAAAA;
+	text-transform: uppercase;
+	font-family: "Lato";
+	font-weight: 700;
+	font-size: 12px;
+}
+
+a.invite-button {
+	position: absolute;
+	bottom: 0;
+	color: #FFFFFF;
+	font-family: 'Lato';
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+}
+a.invite-button span {
+	margin-right: 24px;
+}
+.ranking-item {
+	color: #FFFFFF;
+	font-family: 'Lato';
+	margin-bottom: 12px;
+}
+span.ranking-icon {
+	margin-right: 12px;
+}
+.gold {
+	color: #FFBF00 !important;
+}
+.silver {
+	color: #D7D7D9 !important;
+}
+.bronze {
+	color: #804A00 !important;
+}
+
+/*
+** Responsive
+*/
+@media screen and ( max-width: 560px ) {
+	img.logo {
+		padding-top: 50px;
+		margin-bottom: 50px;
+	}
+	nav.home-nav ul li a {
+		font-size: 24px;
+	}
+	.arweb-logo {
+		font-size: 32px;
+	}
+	img.ggj-cuba-logo,
+	img.ggj-logo {
+		display: block;
+		margin: 0 auto;
+	}
+	img.ggj-cuba-logo {
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+	.modal-instrucciones {
+		width: 90%;
+		overflow-y: auto;
+	}
+	.activated {
+		left: 5%;
+	}
+}

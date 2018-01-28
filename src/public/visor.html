@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bioEmergency Game Registro</title>
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="fonts/organo/organo.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/fjalla-one/fjalla-one-font.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/lato/lato-font.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css" />
+	<link rel="stylesheet" type="text/css" href="css/HoldOn.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<style>
+		video, canvas {
+			width: 100%;
+			margin-top: 0px;
+			position: absolute;
+		}
+		canvas{
+			margin-top: 0px;
+			position: absolute;
+		}
+
+		.data{
+			position: absolute;
+			color: white;
+			font-size: large;
+			text-shadow: #222831;
+			z-index: 20;
+		}
+	</style>
+</head>
+<body>
+
+
+		<div class="demo-frame">
+			<div class="demo-container">
+				<div class="data">
+					<h4 id="time-left"></h4>
+					<h4 id="vaccines"></h4>
+					<h4 id="points"></h4>
+				</div>
+				<video id="video" width="500" height="500" preload autoplay loop muted></video>
+				<canvas id="canvas" width="50" height="50"></canvas>
+			</div>
+		</div>
+		<button class="app-control-btn medicine-btn green" data-sound="spray-audio" ><span class="icon-medicine"></span></button>
+		<button class="app-control-btn scan-btn" data-sound="scanner-audio" id="scan"><span class="icon-scan"></span></button>
+		<button class="app-control-btn emergency-btn orange" data-sound="warning-audio"><span class="icon-emergency"></span></button>
+
+	<audio id="scanner-audio"><source src="sounds/scanner.mp3" type="audio/mp3"></audio>
+	<audio id="spray-audio"><source src="sounds/spray.mp3" type="audio/mp3"></audio>
+	<audio id="warning-audio"><source src="sounds/warning.ogg" type="audio/ogg"></audio>
+
+	<script type="text/javascript" src="js/visor.js"></script>
+
+	<script src="js/socket.io.js"></script>
+	<script>
+        var socket = io('https://10.58.10.231:8443');
+
+            iduser = sessionStorage.getItem('userid');
+            if (iduser) {
+                socket.emit('start-game', iduser);
+            }
+	</script>
+	<script src="js/lodash.core.min.js"></script>
+	<script src="js/build/tracking-min.js"></script>
+	<script src="js/build/jquery-3.3.1.min.js"></script>
+	<script src="js/build/HoldOn.min.js"></script>
+	<script src="js/build/face-min.js"></script>
+	<script src="js/build/eye-min.js"></script>
+	<script src="js/build/dat.gui.min.js"></script>
+    <script src="js/game-libs.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
