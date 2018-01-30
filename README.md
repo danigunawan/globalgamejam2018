@@ -21,12 +21,12 @@ To install the game is required git,  npm.
   ```bash
   git clone https://github.com/luismojena/globalgamejam2018
   ```
-  1.  Then in the server folder, to satisfy dependencies, we execute: 
+  2.  Then in the server folder, to satisfy dependencies, we execute: 
   ```bash
   npm install
   ```
-  1.  To run the server: 
+  3.  To run the server: 
   ```bash
   npm start
   ```
-  1.  According to your ip you should use your phone to access to: https://localhost:8443 and play the game
+  4.  According to your ip you should use your phone to access to: https://localhost:8443 and play the game
